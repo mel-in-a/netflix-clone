@@ -1,9 +1,26 @@
 import "./App.css";
+import datas from "./data/movies_vze0mn.json";
 
 function App() {
   return (
     <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
+    
+      {
+        datas.map( section => {
+          return <div className="">
+             <h2>{section.category}</h2>
+        
+          {section.images} 
+
+          images.map( section.images => {
+            {images}
+          })
+        
+           </div> 
+          // pour chaque catégorie mapper les images
+        })
+      }
+ 
     </div>
   );
 }
