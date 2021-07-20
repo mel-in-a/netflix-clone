@@ -1,26 +1,27 @@
 import "./App.css";
 import datas from "./data/movies_vze0mn.json";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-    
-      {
-        datas.map( section => {
-          return <div className="">
-             <h2>{section.category}</h2>
+      <Header />
+      {datas.map((section) => {
+        return (
+          <div className="">
+            <h2>{section.category}</h2>
+            <div className="section">
+         
+              {section.images.map((image) => {
+                return  <img src={image} alt="" /> ;
+              })}
         
-          {section.images} 
-
-          images.map( section.images => {
-            {images}
-          })
-        
-           </div> 
-          // pour chaque catégorie mapper les images
-        })
-      }
- 
+            </div>
+            {/* Il faut mapper ici sur ton deuxième tableau d'objet, donc
+            section.images et non images ! Attention à ta syntaxe 😃 ! */}
+          </div>
+        );
+      })}
     </div>
   );
 }
