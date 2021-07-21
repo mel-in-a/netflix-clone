@@ -1,4 +1,5 @@
 import datas from "../data/movies_vze0mn.json";
+//penser au déstructuring
 const Section = () => {
   return (
     <>
